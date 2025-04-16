@@ -103,3 +103,18 @@ Once this is working, you can:
 	3.	Add advanced features like logging or batch processing.
 
 This setup will give you a working, terminal-based AI environment within Docker that you can expand on. Let me know if you hit any issues along the way.
+
+--
+On Host Machine - python3 -c "from transformers import AutoModelForCausalLM, AutoTokenizer; AutoModelForCausalLM.from_pretrained('gpt2'); AutoTokenizer.from_pretrained('gpt2')"
+
+Then Mount on docker - docker run --rm -v $HOME/.cache/huggingface:/root/.cache/huggingface ai-gpt2
+
+Update model info:
+```
+print("Loading model...")
+model = AutoModelForCausalLM.from_pretrained(model_name)
+print("Model loaded.")
+
+```
+
+Lighter Model - model_name = "distilgpt2"
