@@ -1,0 +1,24 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#E6F7FF"/>
+  <path d="M200 50L220 90H180L200 50Z" fill="#FF5252"/>
+  <rect x="195" y="90" width="10" height="60" fill="#FF5252"/>
+  <path d="M100 150H300V250H100V150Z" fill="#BDBDBD"/>
+  <path d="M120 170H140V190H120V170Z" fill="#FFFFFF"/>
+  <path d="M160 170H180V190H160V170Z" fill="#FFFFFF"/>
+  <path d="M200 170H220V190H200V170Z" fill="#FFFFFF"/>
+  <path d="M240 170H260V190H240V170Z" fill="#FFFFFF"/>
+  <path d="M280 170H300V190H280V170Z" fill="#FFFFFF"/>
+  <path d="M120 210H140V230H120V210Z" fill="#FFFFFF"/>
+  <path d="M160 210H180V230H160V210Z" fill="#FFFFFF"/>
+  <path d="M200 210H220V230H200V210Z" fill="#FFFFFF"/>
+  <path d="M240 210H260V230H240V210Z" fill="#FFFFFF"/>
+  <path d="M280 210H300V230H280V210Z" fill="#FFFFFF"/>
+  <path d="M150 100L170 120H130L150 100Z" fill="#FF5252"/>
+  <rect x="145" y="120" width="10" height="30" fill="#FF5252"/>
+  <path d="M250 100L270 120H230L250 100Z" fill="#FF5252"/>
+  <rect x="245" y="120" width="10" height="30" fill="#FF5252"/>
+  <path d="M50 250H350V260H50V250Z" fill="#795548"/>
+  <circle cx="320" cy="80" r="20" fill="#FFEB3B"/>
+  <path d="M50 180C50 180 70 160 90 180C110 200 130 160 150 180" stroke="#4CAF50" stroke-width="5" stroke-linecap="round"/>
+  <path d="M250 180C250 180 270 160 290 180C310 200 330 160 350 180" stroke="#4CAF50" stroke-width="5" stroke-linecap="round"/>
+</svg>
