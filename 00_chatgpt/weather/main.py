@@ -1,6 +1,8 @@
 import os
 from openai import OpenAI
 import argparse
+import psycopg2
+from modules.openai2json import parse_openai_response, format_for_psql
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--city', required=True, help='City name')
@@ -40,11 +42,31 @@ response = client.chat.completions.create(
 )
 
 # Print the completion
-#print("Payload Response:")
-#print(response)
 print("ChatGPT Response:")
 print(response.choices[0].message.content)
 print("\n\n")
+
+# Checks
+parsed_data = parse_openai_response(response.choices[0].message.content)
+psql_data = format_for_psql(parsed_data)
+
+if psql_data:
+    print("Data ready for PostgreSQL insertion:", psql_data)
+else:
+    print("Error processing OpenAI response.")
+
+# Insert into DB
+conn = psycopg2.connect(dbname="weather", user="z")
+cur = conn.cursor()
+cur.execute("""
+    INSERT INTO city_weather (name, country, lat, lon, temperature_c, condition)
+    VALUES (%s, %s, %s, %s, %s, %s)
+""", psql_data)
+conn.commit()
+cur.close()
+conn.close()
+
+
 print(f"Completion Tokens: {response.usage.completion_tokens}")
 print(f"Prompt Tokens: {response.usage.prompt_tokens}")
 print(f"Total Tokens: {response.usage.total_tokens}")

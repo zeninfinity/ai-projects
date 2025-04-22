@@ -1,0 +1,11 @@
+CREATE DATABASE weather;
+CREATE TABLE city_weather (
+  id SERIAL PRIMARY KEY,
+  name TEXT,
+  country TEXT,
+  lat DOUBLE PRECISION,
+  lon DOUBLE PRECISION,
+  temperature_c DOUBLE PRECISION,
+  condition TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

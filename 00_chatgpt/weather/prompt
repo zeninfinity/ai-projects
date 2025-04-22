@@ -13,4 +13,4 @@ condition: string;
 };
 }
 
-Respond only with valid TypeScript data matching this interface.
+Respond with valid JSON only. No code blocks, no variable declarations, just a raw JSON object.
