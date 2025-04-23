@@ -21,15 +21,14 @@ def analyze():
     nums = request.json['nums']
     prompt = (
     f"Analyze the numbers {nums[0]}, {nums[1]}, and {nums[2]}. "
-    f"List their properties (e.g., prime, even, palindrome), then determine if they share any one property. "
-    f"Also find something they have factually in common."
-    f"If not, say 'They have no notable property in common.' Be factually accurate and logical."
+    f"Find something they have factually in common."
 )
     # prompt = f"Given these three numbers: {nums[0]}, {nums[1]}, {nums[2]}, what is one thing interesting and peculiar they all have in common? Think step by step and make sure the answer is factually accurate."
 
     res = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo", #SUCKS
+        # model="gpt-4-turbo",
         max_tokens=100,
         temperature=0.5
     )
