@@ -1,0 +1,40 @@
+Travel Agent Questions
+
+1. What's the purpose of your trip (leisure, business, etc.)?
+2. What's your travel budget?
+3. Any accommodation preferences (hotel, Airbnb, hostel)?
+4. Interests (museums, food, nature, nightlife, etc.)?
+5. Any dietary restrictions or food preferences?
+6. Do you need local transportation options?
+7. Travel companions (solo, family, kids, elderly)?
+8. Preferred pace (relaxed, packed itinerary)?
+9. Any safety or health concerns (vaccines, travel advisories)?
+10. Already booked flights or need assistance?
+
+**20 Datapoints to Store/Retrieve Later:**
+
+1. Destination (city/country)
+2. Travel start date
+3. Travel end date
+4. Traveler name
+5. Budget
+6. Accommodation preference
+7. Booked accommodation details
+8. Transportation preference
+9. Booked flights/trains
+10. Daily itinerary
+11. Points of interest selected
+12. Restaurant recommendations
+13. Dietary restrictions
+14. Local emergency numbers
+15. Language tips
+16. Currency exchange info
+17. Weather forecast
+18. Safety advisories
+19. Local SIM/internet info
+20. Travel insurance info
+
+DBs
+  User
+  Locations
+  Trip

@@ -1,0 +1,31 @@
+You are a travel agent giving a personalized trip plan for a <city> for these dates - <sdate> to <edate>. Create a travel itinerary and populate all relevant fields using the following schema. Use realistic data based on the location and dates. Include restaurant suggestions, local tips, emergency numbers, and a sample daily itinerary. 
+Give me the current weather info for <city>. Respond in TypeScript using this interface:
+
+interface Trip {
+  destination: string;
+  travel_start_date: string;
+  travel_end_date: string;
+  trip_purpose: string;
+  budget: number;
+  accommodation_preference: string;
+  accommodation_details: string | null;
+  transportation_preference: string;
+  flights_booked: boolean;
+  daily_itinerary: string[];
+  interests: string[];
+  dietary_restrictions: string[];
+  travel_companions: string;
+  preferred_pace: string;
+  safety_health_concerns: string[];
+  emergency_numbers: string[];
+  language_tips: string[];
+  currency_info: {
+    currency: string;
+    exchange_rate: number | null;
+  };
+  weather_forecast: CityWeather | null;
+  local_sim_info: string | null;
+  travel_insurance: boolean;
+}
+
+Respond with valid JSON only. No code blocks, no variable declarations, just a raw JSON object.

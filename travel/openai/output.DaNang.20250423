@@ -1,0 +1,42 @@
+ChatGPT Response:
+{
+  "destination": "Da Nang, Vietnam",
+  "travel_start_date": "04/22/25",
+  "travel_end_date": "04/28/25",
+  "trip_purpose": "Vacation",
+  "budget": 2000,
+  "accommodation_preference": "Hotel",
+  "accommodation_details": "Stay at Vinpearl Luxury Da Nang",
+  "transportation_preference": "Public transportation",
+  "flights_booked": true,
+  "daily_itinerary": [
+    "Day 1: Arrival in Da Nang, check into hotel, relax on the beach",
+    "Day 2: Visit Marble Mountains, explore Hoi An Ancient Town",
+    "Day 3: Take a day trip to Ba Na Hills, visit Golden Bridge",
+    "Day 4: Relax at My Khe Beach, try local seafood",
+    "Day 5: Explore Son Tra Peninsula, visit Linh Ung Pagoda",
+    "Day 6: Visit Da Nang Museum of Cham Sculpture, shopping at Han Market",
+    "Day 7: Departure from Da Nang"
+  ],
+  "interests": ["Beach", "Cultural sightseeing", "Local cuisine"],
+  "dietary_restrictions": [],
+  "travel_companions": "Spouse",
+  "preferred_pace": "Relaxed",
+  "safety_health_concerns": ["Stay hydrated", "Beware of pickpockets"],
+  "emergency_numbers": ["Police: 113", "Ambulance: 115", "Fire: 114"],
+  "language_tips": ["Learn basic Vietnamese phrases", "English is widely spoken in tourist areas"],
+  "currency_info": {
+    "currency": "Vietnamese Dong",
+    "exchange_rate": 23000
+  },
+  "weather_forecast": {
+    "city": "Da Nang",
+    "country": "Vietnam",
+    "current_temperature": 28,
+    "weather_description": "Partly cloudy",
+    "high_temperature": 32,
+    "low_temperature": 25
+  },
+  "local_sim_info": "Purchase a local SIM card for affordable data and calls",
+  "travel_insurance": true
+}

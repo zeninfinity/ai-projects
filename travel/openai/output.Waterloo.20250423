@@ -1,0 +1,39 @@
+ChatGPT Response:
+{
+  "destination": "Waterloo, IA",
+
+  "travel_start_date": "04/22/25",
+  "travel_end_date": "04/28/25",
+  "trip_purpose": "Leisure",
+  "budget": 2000,
+  "accommodation_preference": "Hotel",
+  "accommodation_details": "Stay at the Courtyard by Marriott Waterloo Cedar Falls",
+  "transportation_preference": "Rental car",
+  "flights_booked": true,
+  "daily_itinerary": [
+    "Day 1: Arrive in Waterloo, check into hotel, explore downtown area",
+    "Day 2: Visit the John Deere Tractor & Engine Museum, have lunch at Newton's Paradise Cafe, explore RiverLoop Expo Plaza",
+    "Day 3: Take a leisurely walk at Cedar Valley Arboretum, have dinner at Tony's La Pizzeria",
+    "Day 4: Visit the Lost Island Waterpark, have lunch at Beck's Taproom Grill, relax at George Wyth State Park",
+    "Day 5: Explore the Phelps Youth Pavilion, have dinner at Montage",
+    "Day 6: Visit the Grout Museum of History & Science, enjoy a meal at SingleSpeed Brewing Co.",
+    "Day 7: Check out of hotel and depart from Waterloo"
+  ],
+  "interests": ["Museums", "Outdoor activities", "Local cuisine"],
+  "dietary_restrictions": [],
+  "travel_companions": "Solo",
+  "preferred_pace": "Relaxed",
+  "safety_health_concerns": ["None"],
+  "emergency_numbers": ["911 (Emergency)", "319-291-2515 (Waterloo Police Department)"],
+  "language_tips": ["English is the primary language spoken in Waterloo"],
+  "currency_info": {
+    "currency": "US Dollar",
+    "exchange_rate": null
+  },
+  "weather_forecast": {
+    "temperature": 60,
+    "weather_description": "Partly cloudy"
+  },
+  "local_sim_info": null,
+  "travel_insurance": true
+}
