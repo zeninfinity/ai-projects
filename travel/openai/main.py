@@ -16,7 +16,7 @@ with open('api.key', 'r') as file:
     api_key = file.read().strip()
 
 # Read prompt from file
-with open('prompt', 'r') as file:
+with open('prompt.full', 'r') as file:
     prompt_template = file.read().strip()
 
 prompt = prompt_template.replace('<city>', args.city)
