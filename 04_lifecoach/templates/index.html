@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Coach Chat</title>
+  <!-- Link to static CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div id="chat-container">
+    <h1>Hello! I'm your toxically positive life coach Britney!</h1> <!-- Headline added -->
+    <div id="chat">
+      <div class="msg bot-msg">Tell me about yourself (and I'll pretend to listen!). </div>
+    </div>
+    <input type="text" id="user-input" placeholder="Tell me about yourself..." />
+    <button onclick="handleInput()">Send</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
