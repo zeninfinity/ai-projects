@@ -9,7 +9,10 @@
 </head>
 <body>
   <div id="chat-container">
-    <h1>Hello! I'm your toxically positive life coach Britney!</h1> <!-- Headline added -->
+    <div style="max-width: 400px; margin: 0 auto;">
+      <img src="{{ url_for('static', filename='img/na.png') }}" alt="Coach Britney" style="max-width: 100%; height: auto; display: block; max-height: 300px;">
+    </div>
+    <h2>Hello! I'm your toxically positive life coach Britney!</h2>
     <div id="chat">
       <div class="msg bot-msg">Tell me about yourself (and I'll pretend to listen!). </div>
     </div>

@@ -12,13 +12,12 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 600px;
   max-width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 450px;
+  gap: 20px;
 }
 
 #chat {
@@ -26,6 +25,7 @@ body {
   overflow-y: auto;
   margin-bottom: 20px;
   padding-right: 10px;
+  max-height: 300px;
 }
 
 .msg {
