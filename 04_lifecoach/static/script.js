@@ -12,6 +12,7 @@ input.addEventListener('keydown', async (e) => {
     chat.innerHTML += `<div>User: ${val}</div>`;
     input.value = '';
     chat.innerHTML += `<div>Bot: Thinking...</div>`;
+    chat.scrollTop = chat.scrollHeight;
 
     const res = await fetch('/coach', {
       method: 'POST',
@@ -22,5 +23,6 @@ input.addEventListener('keydown', async (e) => {
     const data = await res.json();
     chat.innerHTML += `<div>Bot: ${data.result}</div>`;
     input.focus();
+    chat.scrollTop = chat.scrollHeight;
   }
 });
