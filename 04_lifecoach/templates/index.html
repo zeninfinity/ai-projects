@@ -12,7 +12,11 @@
     <div style="max-width: 400px; margin: 0 auto;">
       <img src="{{ url_for('static', filename='img/na.png') }}" alt="Coach Britney" style="max-width: 100%; height: auto; display: block; max-height: 300px;">
     </div>
-    <h2>Hello! I'm your toxically positive life coach Britney!</h2>
+    <h2 id="bot-headline"></h2>
+<script>
+  const BOT_NAME = "Brytt\'kneigh";
+  document.getElementById("bot-headline").innerText = `Hello! I'm your toxically positive life coach ${BOT_NAME}!`;
+</script>
     <div id="chat">
       <div class="msg bot-msg">Tell me about yourself (and I'll pretend to listen!). </div>
     </div>
@@ -20,7 +24,7 @@
     <button onclick="handleInput()">Send</button>
   </div>
 
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"> </script>
 
 </body>
 </html>
