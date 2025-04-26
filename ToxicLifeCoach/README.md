@@ -1,10 +1,7 @@
-# Life Coach
+# Toxic Life Coach
 
-## Goal - test ongoing conversation chats. 
+## Description 
+Toxic Life Coach is a satirical AI chatbot that floods you with relentless, over-the-top positivity, no matter what you say. Built with Flask, OpenAI’s API, and a sharp sense of humor.
 
-## Installation
-
-pip install -r requirements.txt
-
-## Example
-
+## Goal 
+Learn ongoing conversation chats. 
