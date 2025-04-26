@@ -19,7 +19,7 @@ def index():
 @app.route('/coach', methods=['POST'])
 def coach():
     user_input = request.json['user_input']
-    prompt = f"You are a positive life coach. The user said: '{user_input}'. Reply with a kind, encouraging message that highlights why this is a good trait or insight and give a constructive next step."
+    prompt = open("prompt.persona", "r").read().replace('{user_input}', request.json['user_input'])
 
     res = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
