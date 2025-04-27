@@ -147,11 +147,13 @@ def coach():
         # Get a relevant product based on the conversation
         product = get_relevant_product(conversation_with_response, products)
         if product:  # Only suggest if a relevant product was found
-            product_suggestion = f"\n\nBy the way, I sense your energy would harmonize beautifully with our {product['productname']}. For just ${product['cost']}, you can {product['description']} This sacred offering will elevate your journey. [SKU: {product['sku']}]"
+            # Add a double newline to create visual separation
+            product_suggestion = f"\n\nBy the way, I sense your energy would harmonize beautifully with our {product['productname']}. For just ${product['cost']}, you can \"{product['description']}\" This sacred offering will elevate your journey."
             assistant_response += product_suggestion
     
     # Add assistant's response to messages (without the product suggestion)
-    messages.append({"role": "assistant", "content": assistant_response.split("\n\nBy the way")[0]})
+    original_response = assistant_response.split("\n\nBy the way")[0]
+    messages.append({"role": "assistant", "content": original_response})
     
     # Store updated conversation history in session
     session['conversation_history'] = messages
