@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template, session
 from openai import OpenAI
 import os
+import csv
+import json
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Add a secret key for sessions
@@ -11,6 +13,81 @@ with open('api.key', 'r') as f:
     api_key = f.read().strip()
 
 client = OpenAI(api_key=api_key)
+
+# Load products from CSV
+def load_products():
+    products = []
+    try:
+        with open('products.csv', 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                if row['status'] == 'active':
+                    products.append(row)
+    except Exception as e:
+        print(f"Error loading products: {e}")
+    return products
+
+# Select the most relevant product based on the conversation
+def get_relevant_product(conversation_history, all_products):
+    # Create a condensed version of the conversation
+    condensed_convo = []
+    for msg in conversation_history:
+        if msg["role"] != "system":  # Skip system messages
+            condensed_convo.append(f"{msg['role']}: {msg['content']}")
+    
+    conversation_text = "\n".join(condensed_convo)
+    
+    # Create a simplified product list for the AI to choose from
+    simple_products = []
+    for product in all_products:
+        simple_products.append({
+            "id": product["id"],
+            "productname": product["productname"],
+            "description": product["description"],
+            "category": product["category"],
+            "cost": product["cost"]
+        })
+    
+    # Create a prompt for product selection
+    prompt = f"""Based on the following conversation, select the most relevant product to recommend to the user.
+The product should address their needs, concerns, or align with the spiritual guidance they're receiving.
+
+Conversation:
+{conversation_text}
+
+Available Products (in JSON format):
+{json.dumps(simple_products, indent=2)}
+
+Return only the ID of the most appropriate product as a number.
+If you're unsure or there's no clear match between the conversation and any product, respond with "NONE"."""
+    
+    try:
+        res = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="gpt-3.5-turbo",
+            max_tokens=10,
+            temperature=0.2
+        )
+        
+        # Try to extract a product ID
+        response_text = res.choices[0].message.content.strip().upper()
+        if response_text == "NONE":
+            return None
+            
+        try:
+            product_id = int(response_text.replace(".", "").strip())
+            # Find the product with this ID
+            for product in all_products:
+                if int(product["id"]) == product_id:
+                    return product
+        except:
+            return None  # If we can't parse the ID, don't suggest a product
+    
+    except Exception as e:
+        print(f"Error in product selection: {e}")
+    
+    # Don't fall back to random selection - return None if no clear match
+    return None
 
 # Serve the index.html file at the root URL using render_template
 @app.route('/')
@@ -60,8 +137,21 @@ def coach():
     # Get the response
     assistant_response = res.choices[0].message.content.strip()
     
-    # Add assistant's response to messages
-    messages.append({"role": "assistant", "content": assistant_response})
+    # Add the new message to conversation history before looking for a product
+    conversation_with_response = messages.copy()
+    conversation_with_response.append({"role": "assistant", "content": assistant_response})
+    
+    # Always try to suggest a product (no random chance)
+    products = load_products()
+    if products:
+        # Get a relevant product based on the conversation
+        product = get_relevant_product(conversation_with_response, products)
+        if product:  # Only suggest if a relevant product was found
+            product_suggestion = f"\n\nBy the way, I sense your energy would harmonize beautifully with our {product['productname']}. For just ${product['cost']}, you can {product['description']} This sacred offering will elevate your journey. [SKU: {product['sku']}]"
+            assistant_response += product_suggestion
+    
+    # Add assistant's response to messages (without the product suggestion)
+    messages.append({"role": "assistant", "content": assistant_response.split("\n\nBy the way")[0]})
     
     # Store updated conversation history in session
     session['conversation_history'] = messages

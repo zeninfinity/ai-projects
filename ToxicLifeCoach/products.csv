@@ -1,0 +1,36 @@
+id,productname,cost,description,category,sku,created_at,updated_at,status
+1,Starlight Rebirth Retreat,2999,"A 7-day cosmic detox retreat aligning your aura with Andromeda energies.",Retreat,RET-001,2025-04-27,2025-04-27,active
+2,Whispering Winds Sanctuary,2499,"Reconnect with Gaia through guided forest breathing ceremonies.",Retreat,RET-002,2025-04-27,2025-04-27,active
+3,Celestial Womb Retreat,3500,"Rebirth your inner goddess under the Grandmother Moon.",Retreat,RET-003,2025-04-27,2025-04-27,active
+4,Galactic Heart Expansion,4000,"Awaken your multi-dimensional soul through Pleiadian sound baths.",Retreat,RET-004,2025-04-27,2025-04-27,active
+5,Oceanic Soul Revival,3200,"Swim with spirit dolphins to cleanse karmic burdens.",Retreat,RET-005,2025-04-27,2025-04-27,active
+6,Sunfire Root Elixir,45,"Blend of solar-charged turmeric and elderflower for vibrational vitality.",Herbal Remedy,HERB-001,2025-04-27,2025-04-27,active
+7,Third Eye Bloom Tea,38,"Jasmine, mugwort, and blue lotus for pineal awakening.",Herbal Remedy,HERB-002,2025-04-27,2025-04-27,active
+8,Quantum Calm Tincture,50,"Lavender, passionflower, and invisible light frequencies for deep peace.",Herbal Remedy,HERB-003,2025-04-27,2025-04-27,active
+9,Gaian Renewal Powder,42,"Spirulina, chlorella, and crushed meteorite dust for grounding.",Herbal Remedy,HERB-004,2025-04-27,2025-04-27,active
+10,Silver Ray Breath Drops,39,"Colloidal silver and peppermint to energize your cosmic breath.",Herbal Remedy,HERB-005,2025-04-27,2025-04-27,active
+11,Arcturian Light Channeling,299,"Private cosmic alignment session with Arcturian guides.",Cosmic Session,COS-001,2025-04-27,2025-04-27,active
+12,Photon Weaving Ceremony,275,"Weave your personal soul light threads back into universal consciousness.",Cosmic Session,COS-002,2025-04-27,2025-04-27,active
+13,Zero Point Portal Activation,350,"Shift your vibrational timeline to the zero-point frequency.",Cosmic Session,COS-003,2025-04-27,2025-04-27,active
+14,Andromedan Star Blessing,400,"Receive codes of eternal wisdom from Andromeda via light touch.",Cosmic Session,COS-004,2025-04-27,2025-04-27,active
+15,Crystalline DNA Unfolding,325,"Reactivate ancient DNA strands sleeping within your cells.",Cosmic Session,COS-005,2025-04-27,2025-04-27,active
+16,Moonbeam Aura Polish,25,"A shimmering mist to cleanse and enhance your aura under moonlight.",Product,PROD-001,2025-04-27,2025-04-27,active
+17,Galactic Scent Diffuser,150,"Diffuse Pleiadian scents to open your home’s astral portal.",Product,PROD-002,2025-04-27,2025-04-27,active
+18,Spirit Animal Discovery Deck,60,"Oracle cards to reveal your hidden cosmic animal guides.",Product,PROD-003,2025-04-27,2025-04-27,active
+19,Astral Socks,18,"Wear these during sleep for enhanced lucid dreaming travel.",Product,PROD-004,2025-04-27,2025-04-27,active
+20,Earth Star Sandals,90,"Ground instantly through the soles with sacred magnetite inserts.",Product,PROD-005,2025-04-27,2025-04-27,active
+21,Infinity Frequency Bracelet,75,"Emit and receive fifth-dimensional frequencies through crystal technology.",Product,PROD-006,2025-04-27,2025-04-27,active
+22,Universal Breathwork Manual,22,"Ancient breathing patterns from Sirius archived for your awakening.",Product,PROD-007,2025-04-27,2025-04-27,active
+23,Cosmic Paint Set,45,"Colors mixed with meteor dust to channel star-being artistry.",Product,PROD-008,2025-04-27,2025-04-27,active
+24,Soul Anchor Stone,30,"Carry to prevent accidental timeline slipping.",Product,PROD-009,2025-04-27,2025-04-27,active
+25,Quantum Shield Spray,48,"Invisible energy shield against chaotic cosmic noise.",Product,PROD-010,2025-04-27,2025-04-27,active
+26,Akashic Access Pen,55,"Write directly into the Akashic Records with this sacred pen.",Product,PROD-011,2025-04-27,2025-04-27,active
+27,Mercury Retrograde Rescue Kit,120,"Survival tools for navigating communication breakdowns with cosmic grace.",Product,PROD-012,2025-04-27,2025-04-27,active
+28,Chakra Misting Wand,80,"Instantly rebalance chakras with this rainbow energy wand.",Product,PROD-013,2025-04-27,2025-04-27,active
+29,Starseed Awakening Hoodie,99,"Threaded with frequencies for comfort across multiple dimensions.",Product,PROD-014,2025-04-27,2025-04-27,active
+30,Celestial Memory Oil,50,"Recall past lives through aromatic memory activation.",Product,PROD-015,2025-04-27,2025-04-27,active
+31,Dreamscape Compass,65,"Find your way in astral dreamworlds without getting lost.",Product,PROD-016,2025-04-27,2025-04-27,active
+32,Lunar Light Bath Bombs,35,"Soak under a simulated full moon frequency for healing.",Product,PROD-017,2025-04-27,2025-04-27,active
+33,Interdimensional Sunglasses,88,"Protect your eyes during sudden vibrational shifts.",Product,PROD-018,2025-04-27,2025-04-27,active
+34,Gaia Resonance Pillow,70,"Synchronize your REM cycles with Earth's heartbeat.",Product,PROD-019,2025-04-27,2025-04-27,active
+35,Solar Plexus Boost Patches,40,"Wear on your abdomen to enhance personal power flow.",Product,PROD-020,2025-04-27,2025-04-27,active
