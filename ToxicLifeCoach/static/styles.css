@@ -1,70 +1,136 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 #chat-container {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 600px;
-  max-width: 100%;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  height: calc(100vh - 40px);
+}
+
+.coach-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  height: 200px; /* Fixed height for the image container */
+  overflow: hidden;
+  position: relative;
+}
+
+.coach-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+h2#bot-headline {
+  text-align: center;
+  margin: 10px 0;
+  flex-shrink: 0; /* Prevent headline from shrinking */
 }
 
 #chat {
   flex-grow: 1;
   overflow-y: auto;
-  margin-bottom: 20px;
-  padding-right: 10px;
-  max-height: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  min-height: 200px; /* Minimum height for chat area */
+  max-height: calc(100vh - 450px); /* Adjust based on other elements */
+  display: flex;
+  flex-direction: column;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0; /* Prevent input area from shrinking */
 }
 
 .msg {
-  margin: 0.8rem 0;
-  padding: 10px;
-  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word; /* Ensures text wraps instead of overflow */
+  line-height: 1.4;
 }
 
 .bot-msg {
   background-color: #e0e0e0;
   text-align: left;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
 }
 
 .user-msg {
   background-color: #007bff;
   color: white;
   text-align: right;
+  margin-left: auto;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  width: calc(100% - 20px);
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 20px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 button {
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  margin-top: 10px;
   width: 100%;
+  transition: background-color 0.2s;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-height: 700px) {
+  .coach-image-container {
+    height: 120px;
+  }
+  
+  #chat {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  #chat-container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .msg {
+    max-width: 90%;
+  }
 }
