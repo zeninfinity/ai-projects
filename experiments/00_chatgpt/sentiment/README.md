@@ -1,4 +1,4 @@
-# Sentementer
+# Sentimenter
 
 Goals 
 - Create a simple script to retrieve the sentiment of a AI prompt.
@@ -54,6 +54,7 @@ $
 ```
 
 ## Sentiment Descriptions
+```
 type SentimentResponse = {
   polarity: number; // Sentiment strength from -1 (very negative) to 1 (very positive)
   subjectivity: number; // How subjective (1) or objective (0) the text is
@@ -62,3 +63,4 @@ type SentimentResponse = {
   toxicity: boolean; // Whether toxic language is present
   targeted_sentiment: { [target: string]: number }; // Sentiment toward specific keywords/entities
 };
+```
