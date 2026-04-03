@@ -1,0 +1,17 @@
+"Create a focused implementation plan in the /prds folder for integrating RevenueCat (iOS & Android).
+
+The plan must include:
+
+    Title & Project Goal: A one-sentence 'North Star' for the integration.
+
+    Phase 1: Store & Dashboard Config: Necessary steps in App Store Connect, Google Play, and RevenueCat to enable sandbox testing.
+
+    Phase 2: SDK Installation: Minimal steps to add dependencies.
+
+    Phase 3: The 'Mock' Paywall: Requirements for a single test screen that displays products and handles 'Buy'/'Restore' actions.
+
+    Phase 4: Backend/DB Logic: Simple schema requirements for storing customer_id and subscription_status.
+
+    Phase 5: Verification: How to perform a 'Sandbox' purchase without real money.
+
+Constraints: No code. Focus on architectural flow and configuration steps to avoid over-engineering. Keep it lean."
